@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context="com.indonesiaberbicara.discussionapp.MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:fitsSystemWindows="true"
+        android:background="#fff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:background="#00000000"
+                    android:layout_width="170dp"
+                    android:layout_height="25dp"
+                    android:textColor="#ff0000"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Diskusi Minggu Ini" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_article"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                        <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_artice_title"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="96dp"
+                        android:text="Curug bidadari kini diperluas sebesar 1 hektar dan membuat akses masuk dialihkan"
+                        android:background="#00ffffff"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:textColor="#fff"
+                        android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_article_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:text="17 Oktober 2018" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_conclusions"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/appbar"
+        android:layout_alignParentStart="true"
+        android:background="#00000000"
+        android:text="skadsjkslk"
+        android:textColor="#ff0000"
+        android:layout_marginTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_conclusions"
+        android:layout_marginTop="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"/>
+
+</RelativeLayout>
